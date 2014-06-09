@@ -1,0 +1,2 @@
+axis equal
+axis tight

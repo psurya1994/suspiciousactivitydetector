@@ -1,0 +1,1376 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    
+    .writely-callout-data {
+      display: inline-block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin-left: -1px;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Courier New;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Courier New;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>pose_estimation_code_release</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+<a id=pagetop name=pagetop></a><br>
+<div class=writely-toc id=WritelyTableOfContents toctype=none+none>
+  <ol class=writely-toc-none>
+    <li>
+      <a href=#I_Human_Pose_Estimation_in_Sti_3402668989729136 target=_self>I. Human Pose Estimation in Still Images 1.21</a>
+    </li>
+    <li>
+      <a href=#II_Quick_start_pose_estimation_5370580854360014 target=_self>II. Quick start - pose estimation given an input upper-body detection</a>
+    </li>
+    <li>
+      <a href=#III_Quick_start_fully_automati_3548737394157797 target=_self>III Quick start - fully automatic upper-body detection and pose estimation</a>
+    </li>
+    <li>
+      <a href=#IV_Installing_the_mex_files_90_3772700047120452 target=_self>IV. Installing the mex files</a>
+    </li>
+    <li>
+      <a href=#V_Introduction_757640713851738_873524711932987 target=_self>V. Introduction</a>
+    </li>
+    <li>
+      <a href=#VI_Full_Body_support_430702887_39033336378633976 target=_self>VI. Full Body Support</a>
+    </li>
+    <li>
+      <a href=#VII_Software_Functions_8349012 target=_self>VII. Software Functions</a>
+    </li>
+    <li>
+      <a href=#VIII_Parameters_43500177096689_24808564851991832 target=_self>VIII. Pre-trained Model Parameters</a>
+    </li>
+    <li>
+      <a href=#XI_References_4078369692078167_38502898369915783 target=_self>X. References</a>
+    </li>
+    <li>
+      <a href=#XII_Version_history_5978083564_45728313154540956 target=_self>XI. Version history</a>
+    </li>
+  </ol>
+</div>
+<p>
+  <br>
+</p>
+<h3>
+  <a id=I_Human_Pose_Estimation_in_Sti_3402668989729136 name=I_Human_Pose_Estimation_in_Sti_3402668989729136></a>I. Human Pose Estimation in Still Images 1.21
+</h3>
+<br>
+<p>
+  Research by V. Ferrari, M. Eichner, M. Marin, and A. Zisserman,
+</p>
+<p>
+  supported by CLASS and SNSF.
+</p>
+<p>
+  <br>
+  Software by V. Ferrari and M. Eichner,
+</p>
+<p>
+  building on components by Deva Ramanan (image parsing [1]),
+</p>
+<p>
+  and by Varun Gulshan, Pushmeet Kohli and Vladimir Kolmogorov (GrabCut [6]). &nbsp;
+</p>
+<p>
+  <br>
+  This code was developed under Linux with Matlab R2008b.
+</p>
+<p>
+  We have also successfully run it under Windows XP with Matlab R2008b (see 'Installing the mex files')
+</p>
+<p>
+  and under MacOSX 10.5 Leopard with Matlab R2008a.
+</p>
+<p>
+  There is no guarantee the code will run on other operating systems or Matlab versions.
+</p>
+<br>
+<a href=#pagetop id=y47t target=_self title="back to the top">back to the top</a><br>
+<br>
+<h3>
+  <a id=II_Quick_start_pose_estimation_5370580854360014 name=II_Quick_start_pose_estimation_5370580854360014></a>II. Quick start - pose estimation given an input upper-body detection
+</h3>
+<br>
+This release contains all you need to do pose estimation starting from a bounding-box around the upper-body of a person, which you must provide as input.<br>
+<br>
+<p>
+  0. Let &lt;dir&gt; be the directory where you uncompressed the .tgz release archive.
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  1. Start Matlab
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  2. Execute the following commands:
+</p>
+<p>
+  <br>
+  cd &lt;dir&gt;/code
+</p>
+<p>
+  startup
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  3. If you are running the code for the fist time then execute:
+</p>
+<p>
+  <br>
+  installmex
+</p>
+<p>
+  <br>
+  if this causes problems then see the section 'Installing the mex files'.
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  4. Your matlab environment is now ready for running the pose estimator.
+</p>
+<p>
+  To run on the provided example execute:
+</p>
+<p>
+  <br>
+  cd ../example_data;
+</p>
+<p>
+  <b>% upper-body parsing</b>
+</p>
+<p>
+  [T sticks_imgcoor] = PoseEstimStillImage(pwd, 'images', '%06d.jpg', 0, 'ubf', [343 27 242 217]', fghigh_params, parse_params_Buffy3and4andPascal, [], pm2segms_params, true);
+</p>
+<p>
+  <b>% full-body parsing</b>
+</p>
+<p>
+  [T sticks_imgcoor] = PoseEstimStillImage(pwd, 'images', '%06d.jpg', 1, 'full', [119 70 158 142]', fghigh_params, parse_params_Buffy3and4andPascal, [], pm2segms_params, true);<br>
+</p>
+<p>
+  <br>
+  This should produce output in &lt;dir&gt;/example_data/segms_ubf/000000.jpg and &lt;dir&gt;/example_data/segms_full/000001.jpg
+</p>
+<p>
+  If this output matches exactly &lt;dir&gt;/000000_stickman.jpg and &lt;dir&gt;/000001_stickman.jpg, then the pose estimator is working perfectly.
+</p>
+<br>
+<p>
+  The coordinates [343 27 242 217] and [119 70 158 142] represent the input upper-body detections.
+</p>
+<br>
+<a href=#pagetop id=k1ur target=_self title="back to the top">back to the top</a><br>
+<br>
+<br>
+<br>
+<h3>
+  <a id=III_Quick_start_fully_automati_3548737394157797 name=III_Quick_start_fully_automati_3548737394157797></a>III Quick start - fully automatic upper-body detection and pose estimation
+</h3>
+<br>
+This release can be used in conjunction with our upper-body detector [5] to give a fully automatic pipeline taking just an image as input.<br>
+<br>
+0. Let &lt;dir&gt; be the directory where you uncompressed the .tgz release archive of the pose estimator.<br>
+<br>
+<br>
+1. Install the Upper Body Detector [5], following the quick start instructions within its readme<br>
+<br>
+<br>
+<div>
+  2. Start Matlab<br>
+  <br>
+  <br>
+  <p>
+    3. Execute the following commands:
+  </p>
+  <p>
+    <br>
+    cd &lt;dir&gt;/code
+  </p>
+  <p>
+    startup
+  </p>
+  <p>
+    <br>
+  </p>
+  <p>
+    <br>
+  </p>
+  <p>
+    4. If you are running the code for the fist time then execute:
+  </p>
+  <p>
+    <br>
+    installmex
+  </p>
+  <p>
+    <br>
+    if this causes problems then see the section 'Installing the mex files'.
+  </p>
+  <br>
+  <br>
+  5. At this point both upper body detector and human pose estimation software modules should be ready<br>
+  (i.e. all parameters should be loaded, all files should be mexed, all paths should be set);<br>
+  if the step 6 below results in an error it means that something has not been set.<br>
+  <br>
+  <br>
+  6. Execute<br>
+  DetectAndEstimDir('&lt;dir&gt;/example_data/images','replace_me_with_path_to_upperbody_detector/code/pff_model_upperbody_final.mat','replace_me_with_path_to_upperbody_detector/code/haarcascade_frontalface_alt2.xml',det_pars,'ubf',fghigh_params,parse_params_Buffy3and4andPascal,[],pm2segms_params,1);<br>
+  <br>
+  this will process all images in directory &lt;dir&gt;/example_data/images and produce the following output in the same directory:<br>
+  - dets/ : directory containing person detections<br>
+  - fghigh_classname/ poses_classname/ segms_classname/ : directories containing foreground highlighting [2], pose maps, and output stickmen overlays respectively for all images in the directory. These overlays are provided as visualizations of what the algorithm does.<br>
+  - a single file for each detection and image in the format: $imagename_$detnum$imgextension&nbsp;<br>
+  - $imagename$imgextension$_pms.mat - results for all detections per image (details of its contents below)
+</div>
+<br>
+----------------------------------------------------------------------------------------<br>
+<div>
+  For estimating full bodies use <b>'full'</b> instead of <b>'ubf'</b> when running DetectAndEstimDir.
+</div>
+<div>
+  You should not change the person detector. DetectAndEstimDir automatically derives a
+</div>
+<div>
+  full body detection window from the upper-body detections [5].
+</div>
+<div>
+  ----------------------------------------------------------------------------------------
+</div>
+<br>
+<a href=#pagetop id=sylb target=_self title="back to the top">back to the top</a><br>
+<br>
+<h3>
+  <a id=IV_Installing_the_mex_files_90_3772700047120452 name=IV_Installing_the_mex_files_90_3772700047120452></a>IV. Installing the mex files
+</h3>
+<br>
+<p>
+  In case of problems with the installmex.m script during compilation of 'mexDGC.cpp' or 'nema_lognorm_fast.cxx' try:
+</p>
+<p>
+  <br>
+  1) change the mex compiler using the command: mex -setup
+</p>
+<p>
+  &nbsp;&nbsp; and select a new compiler from the on-screen options.
+</p>
+<p>
+  &nbsp;&nbsp; Under Windows XP this code should compile using Visual C++ 2008 Express Edition.
+</p>
+<p>
+  <br>
+  2) if 1) doesn't help then switch off the foreground highlighting stage by setting
+</p>
+<p>
+  &nbsp;&nbsp; parse_params_Buffy3and4andPascal.use_fg_high = false;
+</p>
+<p>
+  <br>
+  unfortunately, if 'triLinearInterpolation.cpp','triLinearVoting.cpp' or 'vgg_nearest_neighbour_dist.cxx'
+</p>
+<p>
+  are not successfully compiled, you will not be able to run our software.
+</p>
+<br>
+<a href=#pagetop id=aueb target=_self title="back to the top">back to the top</a><br>
+<br>
+<h3>
+  <a id=V_Introduction_757640713851738_873524711932987 name=V_Introduction_757640713851738_873524711932987></a>V. Introduction
+</h3>
+<p>
+  We release here software for articulated human pose estimation in still images. Our algorithm [9] is designed to operate in uncontrolled images with difficult illumination conditions and cluttered backgrounds. People can appear at any location and scale in the image, and can wear any kind of clothing, in any colour/texture. The only assumption the algorithm makes is that people are upright (i.e. their head is above their torso) and they are seen approximately from a frontal viewpoint.
+</p>
+<p>
+  <br>
+  The input to this software is an image and a bounding-box around the head and shoulders of a person in the image. This window can be obtained by using our upper-body detector [5], or by any other means. The combination of such a generic, person-independent detector and our software allow for fully automatic pose estimation in uncontrolled images, without knowing the location, scale, or appearance (clothing, skin color) of the person, and without the need for background subtraction. The output of our system is a set of <font face="courier new">line segments indicating location, size and orientation of the body parts (stickmen).</font>
+</p>
+<p>
+  <br>
+  <b>In this release both upper bodies and full bodies are fully supported (near-frontal or near-back views).</b>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  v1.21:
+</p>
+<p>
+  This release matches our latest version reported in [9] and supports full-bodies (see section VI). As we noticed &nbsp;only a marginal influence of the repulsive model [3], we removed it. Until v1.05 the software returned T.PM.sticks, a stickman derived from the posterior marginals of the model. In this release, the software also outputs a second stickman in T.PM.MAP.sticks, corresponding to the approximate MAP of the model. The MAP stickman always has arms of the same length wrt to the detection window, whereas the marginal stickman adapts to the image data. On the other hand, the MAP stickman is always well-formed, respecting the kinematic constraints of the human body, whereas the marginal stickman can occasionally break them.
+</p>
+<p>
+  <br>
+</p>
+<p>
+  This release is designed to be used in conjunction with our upper-body detector [5] to give a fully automatic pipeline taking just an image as input. After installing [5], you can directly <b>run the full pipeline on an image directory by calling a single Matlab function</b> (DetectAndEstimDir.m, see section III).
+</p>
+<br>
+<a href=#pagetop id=q0p_ target=_self title="back to the top">back to the top</a><br>
+<br>
+<br>
+<h3>
+  <a id=VI_Full_Body_support_430702887_39033336378633976 name=VI_Full_Body_support_430702887_39033336378633976></a>VI. Full Body Support
+</h3>
+<div>
+  This release supports full body pose estimation of near-frontal and near-back views. The algorithm estimates the pose of 10 body parts (left/right upper/lower legs have been added). Changing the classname parameter from 'ubf' to 'full' when calling the algorithm effectively switches from upper-body to full-body mode. No other changes are necessary, as the full-body mode also inputs upper-body detection windows [5].
+</div>
+<br>
+<div>
+  For this release we did not train our procedure [4] for obtaining person-specific color models for legs. However, this is not a problem, the software runs properly without it. Legs are estimated using the original iterative parsing technique of [1]. Please ignore the following warnings in the output:&nbsp;
+</div>
+<div>
+  WARNING: empty color model of limb class 3<br>
+</div>
+WARNING: empty color model of limb class 5<br>
+<br>
+<a href=#pagetop id=mo2f target=_self title="back to the top">back to the top</a><br>
+<br>
+<br>
+<h3>
+  <a id=VII_Software_Functions_8349012 name=VII_Software_Functions_8349012></a>VII. Software Functions
+</h3>
+<p>
+  DetectAndEstimDir<br>
+</p>
+<p>
+  -----------------
+</p>
+<p>
+  This is the top level function you should call to run the complete, fully automatic human detection and pose estimation pipeline on a directory with images and stores the results for each image separately. It requires our upper body detector [5] to be installed and accessible through the Matlab path.
+</p>
+<p>
+  <br>
+</p>
+<p>
+  DetectAndEstimDir(img_dir, pffubfmodel_path, facemodel_path, det_pars,classname, fghigh_pars,parse_pars, [], segm_pars, verbose)
+</p>
+<p>
+  <br>
+</p>
+<p>
+  Input:
+</p>
+<p>
+  img_dir - path to the directory containing images
+</p>
+<p>
+  pffubfmodel_path - relative/absolute path to the pretrained upper body part-based model
+</p>
+<p>
+  facemodel_path - (optional) relative/absolute path to the pretrained opencv face model (xml file)<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if [] then skip face detection
+</p>
+<p>
+  det_pars - detection parameters provided with the detector
+</p>
+<p>
+  ...<br>
+</p>
+<p>
+  remaining parameters - look into the description of PoseEstimStillImage
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  PoseEstimStillImage
+</p>
+<p>
+  -------------------<br>
+</p>
+<p>
+  This is the function you should call if you already have an upper-body detection bounding-box (e.g. from [5]).
+</p>
+<p>
+  <br>
+  [T sticks_imgcoor] = PoseEstimStillImage(base_dir, img_dir, img_fname_format, img_number, classname, bb, fghigh_pars, parse_pars, [], verbose)
+</p>
+<p>
+  <br>
+</p>
+<p>
+  Input:<br>
+  base_dir - directory where the results should be stored
+</p>
+<p>
+  img_dir - name of the directory with images relative to the base_dir<br>
+</p>
+<p>
+  img_fname_format - format of the image files in the img_dir, e.g. %06d.jpg means that images are in the format xxxxxx.jpg (where x is a digit)
+</p>
+<p>
+  img_number - image number, used together with img_fname_format to determine the filename of the image to process
+</p>
+<p>
+  classname - either 'ubf', or 'full' - used as a selector for proper parameters.
+</p>
+<p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'ubf' = upper body front/back, ' 'full' = full body front/back
+</p>
+<p>
+  bb - window around object of interest [x y width height]';
+</p>
+<p>
+  &nbsp;&nbsp; &nbsp; for classname == 'ubf' and 'full' use the output from CALVIN upper-body detector [5] (bounding box to be around the head and shoulders (see [2-4] for examples)
+</p>
+<p>
+  fghight_pars - parameters of the foreground highlighting algorithm (used if it is switched on)
+</p>
+<p>
+  parse_params - parameters of the parsing algorithm
+</p>
+<p>
+  segm_params - parameters of the routine that derives hard segmentations and stickmen from posterior marginals (called 'pose maps' in our code)
+</p>
+<p>
+  verbose - 0 = no output, 1 = text output, 2 = displaying intermediate figures
+</p>
+<p>
+  <br>
+</p>
+<p>
+  Output:
+</p>
+<p>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  sticks_imgcoor : sticks coordinates automatically estimated form the posterior marginals (see [2]):
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sticks are formatted in the following way: sticks(:,n) = [x1 y1 x2 y2]' where n denotes the body part:
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;'ubf' mode<br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 - torso, 2 - left upper arm, 3 - right upper arm, 4 - left lower arm, 5 - right lower arm, 6 - head
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'full' mode
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 - torso, 2 - left upper arm, 3 - right upper arm, 4 - left upper leg, 5 - right upper leg,&nbsp;
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6 - left lower arm, 7 - right lower arm, 8 - left lower leg, 9 - right lower leg, 10 - head<br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sticks coordinates are in the image coordinate system.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+  T.PM.sticks : as sticks_imgcoor but sticks coordinates are relative to the pose map (T.PM.respIm) coordinate frame
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.D : detection window, as a column vector [imgnumber,bbx,bby,bbwidth,bbheight,0,0,0,classid]'
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.CM : estimated color models
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM : compressed pose map structure, decompress with UncompressPM before using&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.respIm : decompress using UncompressRespIm before using.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it contains posterior marginal probabilities for each body part over the search space (y,x,theta).
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T.PM.respIm(y,x,theta,p) =
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It is a 4-D array with dimensions Y,X (spatial location) x Theta (orientation) x P (body part).
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Y,X coordinates are expressed in the coordinate frame of the detection window,
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after enlarging as described in [2] and rescaling to a fixed dimension.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The (y,x) coordinates refer to the center of the part.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See ShowRespIm.m for more details.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.a : estimated pose visualization, body part classes are distributed over the color planes (see [1-4])
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.b : soft-segmentation masks derived from .respIm, by convolving it with rectangles representing the body parts.&nbsp;
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; See ShowParseResult.m for details.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.e : total pose entropy, it is a measure of confidence in the estimated pose
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.p : total pixel confidence
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.bb : bounding box of the enlarged area derived from the detection window [x y width height], so as to cover the whole object
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (e.g. the whole upper-body, rather than only the head and shoulders)
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  T.PM.MAP.sticks - approx. MAP stickman (alternative to T.PM.sticks) in the same order as sticks_imgcoor but coordinates relative to the pose map&nbsp;
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  After successful software execution, several output folders are created in base_dir:
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  fghigh_classname (only if parse_params.use_fg_high == true):
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  processed images with highlighted foreground area, together with detection window and enlarged detection window (see [2]).
+</p>
+<br>
+<p>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  poses_classname:
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  processed images with overlaid posterior marginals and approx. MAP stickman obtained by parsing with our model.
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  segms_classname:
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  visualization of the estimated hard segmentations of posterior marginals and stickmen derived from them.
+</p>
+<br>
+<p>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  ShowRespIm
+</p>
+<p>
+  ----------<br>
+</p>
+<p>
+  ShowRespIm(respIm)
+</p>
+<p>
+  <br>
+  Displays the posterior marginal probabilities for each body part over the search space (y,x,theta) (e.g. ShowRespIm(UncompressRespIm(T.PM.respIm))
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  ShowParseResults
+</p>
+<p>
+  ----------------<br>
+</p>
+<p>
+  ShowParseResult(pm, show_whole, show_parts)
+</p>
+<p>
+  <br>
+  Displays the estimated pose visualization (body part classes are distributed over the color planes) and soft-segmentation masks derived from .respIm, by convolving it with rectangles representing the body parts.
+</p>
+<br>
+<a href=#pagetop id=aq.: target=_self title="back to the top">back to the top</a><br>
+<br>
+<h3>
+  <a id=VIII_Parameters_43500177096689_24808564851991832 name=VIII_Parameters_43500177096689_24808564851991832></a>VIII. Pre-trained Model Parameters
+</h3>
+<div>
+  <p>
+    The Location Priors and Appearance Transfer mechanism [4] used during pose estimation, require a training stage. We provide here 3 sets of models, which have been trained on different datasets:
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    <br>
+    - Buffy2to6andPascal
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; trained on all 5 episodes from the Buffy Stickmen dataset [7] and the whole ETHZ Pascal Stickmen dataset [8].
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; This model is suitable for pose estimation on any dataset except for quantitative evaluation on ETHZ Pascal Stickmen and Buffy Stickmen
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; (since these were used for training).
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    <br>
+    - Buffy2to6
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; trained on all 5 episodes of the Buffy Stickmen dataset.
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; This model is suitable for evaluation on the ETHZ Pascal Stickmen dataset, or on any other dataset except Buffy Stickmen.
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    <br>
+    - Buffy3and4andPascal
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; trained on episodes 3 and 4 from Buffy Stickmen and the whole of ETHZ Pascal Stickmen.
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp; This model is suitable for evaluation on episodes 2+5+6 from the Buffy Stickmen dataset, which
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    &nbsp;&nbsp;form the official test set as evaluated in [2,3,4,9]. This model is of course also suitable for evaluation on any other dataset.
+  </p>
+  <br>
+  Models are provided as three distinct parameter files: parse_params_{Buffy2to6andPascal,Buffy2to6,Buffy3and4andPascal}.<br>
+  <br>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    Manually altering the parameter values might result in unpredictable results. We recommend using the parameters provided.
+  </p>
+  <br>
+  <br>
+  <a href=#pagetop id=n8ln target=_self title="back to the top">back to the top</a><br>
+  <p>
+  </p>
+  <br>
+  <br>
+  <font size=3><b>IX. Support</b></font><br>
+  <br>
+  <p>
+    For support please contact us:
+  </p>
+  <p>
+    <br>
+    eichner@vision.ee.ethz.ch
+  </p>
+  <p>
+    ferrari@vision.ee.ethz.ch
+  </p>
+  <p>
+    <br>
+    Have fun!
+  </p>
+  <br>
+  <a href=#pagetop id=npk7 target=_self title="back to the top">back to the top</a><br>
+  <br>
+  <h3>
+    <a id=XI_References_4078369692078167_38502898369915783 name=XI_References_4078369692078167_38502898369915783></a>X. References
+  </h3>
+  <br>
+  <p>
+    [1] D. Ramanan.
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; Learning to parse images of articulated bodies
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; NIPS 2006.
+  </p>
+  <p>
+    <br>
+    [2] V. Ferrari, M. Marin-Jimenez, A. Zisserman
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; Progressive search space reduction for human pose estimation
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; CVPR 2008.
+  </p>
+  <p>
+    <br>
+    [3] V. Ferrari, M. Marin-Jimenez, A. Zisserman
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; Pose Search: retrieving people using their pose
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; CVPR 2009.
+  </p>
+  <p>
+    <br>
+    [4] M.Eichner, V.Ferrari
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; Better appearance models for pictorial structures
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; BMVC 2009.
+  </p>
+  <p>
+    <br>
+    [5] M.Eichner, V.Ferrari
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; CALVIN Upper-body detector<br>
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; http://www.vision.ee.ethz.ch/~calvin/calvin_upperbody_detector/<br>
+  </p>
+  <p>
+    <br>
+    [6] C. Rother, V. Kolmogorov, and A. Blake
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp; Grabcut - interactive foreground extraction using iterated graph cuts.
+  </p>
+  <p>
+    &nbsp;&nbsp; &nbsp;Siggraph 2004.
+  </p>
+  <p>
+    <br>
+    [7] http://www.robots.ox.ac.uk/~vgg/data/stickmen/
+  </p>
+  <p>
+    <br>
+    [8] http://www.vision.ee.ethz.ch/~calvin/ethz_pascal_stickmen/
+  </p>
+  <p>
+    <br>
+  </p>
+  <p>
+  </p>
+  <p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+    [9] M.Eichner, M. Marin-Jimenez, A. Zisserman, V.Ferrari&nbsp;
+  </p>
+  &nbsp;&nbsp;&nbsp;&nbsp;Articulated Human Pose Estimation and Search in (Almost) Unconstrained Still Images<br>
+  &nbsp;&nbsp; &nbsp;ETH Zurich, D-ITET, BIWI, Technical Report No.272, September 2010.
+</div>
+<p>
+</p>
+<br>
+<a href=#pagetop id=w1dk target=_self title="back to the top">back to the top</a><br>
+<br>
+<h3>
+  <a id=XII_Version_history_5978083564_45728313154540956 name=XII_Version_history_5978083564_45728313154540956></a>XI. Version history
+</h3>
+<div>
+  1.21
+</div>
+<div>
+  ---
+</div>
+<div>
+  - full body parsing quick-start added
+</div>
+<div>
+  - class-specific output directories
+</div>
+<br>
+<div>
+  1.2
+</div>
+<div>
+  ---
+</div>
+<div>
+  - system from [9]
+</div>
+<div>
+  - full-body parsing support added
+</div>
+<div>
+  - repulsive model removed
+</div>
+<div>
+  - alternative approximate MAP stickman output
+</div>
+<br>
+<br>
+1.05<br>
+----<br>
+- DetectAndEstimDir - stores images with the detection overlays<br>
+- DetectAndEstimDir - fixed bug in results saving<br>
+<br>
+<br>
+1.04<br>
+----<br>
+- DetectAndEstimDir function added, allowing to easily interface with the upper-body detector [4]<br>
+&nbsp; and to run the full pipeline over all images in a directory<br>
+- text readme replaced with this html version<br>
+<br>
+<br>
+<p>
+  1.03
+</p>
+<p>
+  ----
+</p>
+<p>
+  - initial public release
+</p>
+<p>
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  best system from [4] (see section 6, page 10 in the paper) with a few minor corrections (below).
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  As described in [4], this release includes a procedure for obtaining person-specific body part color models
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  before running pictorial structures inference. Therefore the initial parsing stage of [1,2,3], which used just edges, is skipped. This release also include the refinements to the standard pictorial structure model which we presented in [3] (e.g. the repulsive graph edges to reduce double-counting). For further details please refer to [1,2,3,4].
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  Finally, this release differs slightly from the best one in [4], because of the following corrections:
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp;- additional adjustments of the kinematic prior after the rescaling correction [4]
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  &nbsp;&nbsp; &nbsp;- bug fix in message passing inherited from [1]
+</p>
+<p style=MARGIN-LEFT:0px;MARGIN-RIGHT:0px>
+  <br>
+</p>
+<p>
+</p>
+<p>
+  - code clean up
+</p>
+<p>
+  - 3 pretrained LPAT models [4]
+</p>
+<p>
+  <br>
+</p>
+<br>
+<p>
+</p>
+<p>
+  <br>
+  1.02
+</p>
+<p>
+  ----
+</p>
+<p>
+  - initial friends release
+</p>
+<p>
+  - this README
+</p>
+<p>
+  - structure of the parameters cleaned up
+</p>
+<p>
+  - system brought to the state presented in BMVC 2009
+</p>
+<p>
+  &nbsp; (including full color models via appearance transfer between parts, and better rescaling)
+</p>
+<p>
+  - fixed bug in message passing from [1]
+</p>
+<p>
+  - kinematic priors adjustments after rescaling corrections
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  1.01
+</p>
+<p>
+  ----
+</p>
+<p>
+  - color models via body part location priors and appearance transfer mechanism<br>
+</p>
+<p>
+  <br>
+</p>
+<p>
+  <br>
+  1.0
+</p>
+<p>
+  ---
+</p>
+<p>
+  - initial internal release
+</p>
+<p>
+  <br>
+  <a href=#pagetop id=s17: target=_self title="back to the top">back to the top</a>
+</p>
+<br>
+<br>
+<br>
+<br></body>
+</html>

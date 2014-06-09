@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<base target="_top">
+<style type="text/css">
+  
+
+/* default css */
+
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+
+
+tr {
+  
+  text-align: left;
+  
+}
+
+
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+img {
+  -moz-force-broken-image-icon: 1;
+}
+
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  
+
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+
+  
+    
+    .writely-callout-data {
+      display: none;
+    }
+    
+
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+
+  
+
+
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+
+blockquote {padding: 10px; border: 1px #DDD dashed }
+
+.webkit-indent-blockquote { border: none; }
+
+a img {border: 0}
+
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+
+/* end default css */
+
+
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+
+    div.google_header {
+      flow: static(header);
+    }
+
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+
+    div.google_footer {
+      flow: static(footer);
+    }
+
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+
+    span.google_pagenumber {
+      content: counter(page);
+    }
+
+    span.google_pagecount {
+      content: counter(pages);
+    }
+
+    .endnotes {
+      page: endnote;
+    }
+
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Courier New;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+
+
+/* custom css */
+
+
+/* end custom css */
+
+/* ui edited css */
+
+body {
+  font-family: Courier New;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+
+
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+
+
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+
+.editor .misspell {background-color: yellow}
+
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+
+
+/* end editor CSS */
+
+</style>
+
+  
+  <title>detector_code_release</title>
+
+</head>
+
+<body 
+    
+    >
+    
+    
+    
+<a id=pagetop name=pagetop style="FONT-FAMILY:Courier New"></a><br style="FONT-FAMILY:Courier New">
+<div class=writely-toc id=WritelyTableOfContents style="FONT-FAMILY:Courier New" toctype=none+none>
+  <ol class=writely-toc-none>
+    <li>
+      <a href=#I_CALVIN_Upper_Body_Detector_v_6311923726894395 target=_self>I. CALVIN Upper Body Detector v1.04</a>
+    </li>
+    <li>
+      <a href=#II_Quick_start_949936572695151 target=_self>II. Quick start</a>
+    </li>
+    <li>
+      <a href=#III_Introduction_4609400562476_3726958236891277 target=_self>III. Introduction</a>
+    </li>
+    <li>
+      <a href=#IV_Provided_models_28137960238_7691936388841296 target=_self>IV. Provided models</a>
+    </li>
+    <li>
+      <a href=#V_Matlab_function_080440883757_22946714992042883 target=_self>V. Matlab function</a>
+    </li>
+    <li>
+      <a href=#VI_Support_3001918464433402_97 target=_self>VI. Support</a>
+    </li>
+    <li>
+      <a href=#VII_References_370054192142561_16785274248595095 target=_self>VII. References</a>
+    </li>
+    <li>
+      <a href=#VIII_Version_history_544043214_3506178777027853 target=_self>VIII. Version history</a>
+    </li>
+  </ol>
+</div>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;
+</p>
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=I_CALVIN_Upper_Body_Detector_v_6311923726894395 name=I_CALVIN_Upper_Body_Detector_v_6311923726894395></a>I. CALVIN Upper Body Detector v1.04
+</h3>
+<br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+</p>
+<font face="courier new">Software by M. Eichner and V. Ferrari</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">based on:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- the detection framework of Felzenszwalb et al. [4]</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- training data by M. Marin et al. [3] </font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- the OpenCV implementation [6] of the face detector [5]</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">requirements:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- you must first install the detection framework [4] (voc-release-3.1); a snapshot is available on the same webpage as this Upper Body detector</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- (optional) for best performance install also the OpenCV software package [6]; this Upper Body detector will then integrate also a face detector and will detect more people; (tested with OpenCV v2.0, earlier versions should also be compatible).&nbsp;</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  This software was developed under Linux with Matlab R2009a.
+</p>
+<p style="FONT-FAMILY:Courier New">
+  There is no guarantee it will run on other operating systems or Matlab versions.
+</p>
+<br style="FONT-FAMILY:Courier New">
+<a href=#pagetop id=y47t style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=II_Quick_start_949936572695151 name=II_Quick_start_949936572695151></a>II. Quick start
+</h3>
+<br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  0. Let &lt;dir&gt; be the directory where you uncompressed the .tgz release archive.
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  1. If you want to benefit from the complementary OpenCV face detector make sure that the OpenCV shared libraries
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; are reachable through the LD_LIBRARY_PATH environment variable:<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; e.g.<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;from the bash command line execute:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; LD_LIBRARY_PATH="path_to_opencv_lib:$LD_LIBRARY_PATH"
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  2. Start Matlab
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  3. Execute the following Matlab commands:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+  &nbsp;&nbsp; cd &lt;dir&gt;/code
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; addpath(pwd);
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; load('detenv.mat');
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; addpath(absolute_path_to_voc-release-3.1);&nbsp;&nbsp; % voc-release-3.1 is the release of the detection framework [4]<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  4. If you are running the code for the first time and you want to benefit from the complementary face detector then execute:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+  &nbsp;&nbsp; mex -Lpath_to_opencv_lib_dir -Ipath_to_opencv_include_dir -lcv -lcxcore me_HaarDetectOpenCV.cpp
+</p>
+<br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">5. The Matlab environment is now ready for running our upper body detector. To run it on the provided example execute:</font>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; [ubfdetections] = DetectStillImage('../example_data/images/000000.jpg','pff_model_upperbody_final.mat','haarcascade_frontalface_alt2.xml',det_pars,2)
+</p>
+<br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; A warning message is displayed if me_HaarDetectOpenCV was not successfully mexed at step 4.
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; If you do not want to use the complementary face detector replace the 'haarcascade_frontalface_alt2.xml' with [].<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; This will produce a figure showing the example image with detection bounding-boxes overlaid.<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; If this output matches exactly &lt;dir&gt;/000000_detections.jpg, then the detector is working perfectly.
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; Note that the result is reproducible exactly only if you have set up the system completely, i.e. including the face detector.<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; Otherwise the number of detections will be lower.<br>
+</p>
+<br style="FONT-FAMILY:Courier New">
+<a href=#pagetop id=k1ur style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=III_Introduction_4609400562476_3726958236891277 name=III_Introduction_4609400562476_3726958236891277></a>III. Introduction
+</h3>
+<font face="courier new">We release here software for human upper body detection in still images.</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">This release is a more portable and better performing replacement for the detector in [3].</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">It is based on the successful part-based object detection framework [4]. This release contains a model to detect near-frontal upper-bodies,</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">trained from the data of [3]. The resulting detector returns bounding-boxes fitting the head and upper half of the torso of the person, as the detector [3].</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">While our detector is useful in general, it is especially tailored to be used within our human pose estimation framework [1,2].</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">For example, we use the boxes of [4] but we ensure a fixed aspect-ratio by recomputing the horizontal coordinates of the boxes </font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">according to the predefined height-to-width aspect-ratio value (0.9).</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">The bounding-boxes returned by the detector released here can be directly fed into our pose estimation software [1].</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">For the comfort of the user, [1] includes a matlab routine to easily interface with the detector released here.</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">By installing both this release and [1] the user gets a complete, fully automatic, ready-to-run human detection and pose estimation pipeline.</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">In order to find more people we complement the primary upper-body detections with the upper-body detections regressed from the</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">Viola-Jones [5] face detector. This is especially valuable for people in poses difficult to detect by the upper-body model (e.g. arms raised above the head).</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">We use the face detector implementation available in OpenCV [6] together with one of the pre-trained face models.</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">For this release we estimated regression parameters from a small set of images to map the face detections into detections covering exactly the same portion</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">of a person as the primary upper-body detector.</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">Overall, the upper-body detector algorithm we release here is:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">1. run the primary upper-body detector based on [4]</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">2. run the face detector [5,6]</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">3. regress face detections to obtain secondary upper-body detections</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">4. run non-maximal suppression on both primary and secondary upper-body detections.</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp;&nbsp; During this step we assign -Inf score to all secondary detections so they are only used to complement to the primary detector.</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">In a summary, this release improves over [3] in that:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">+ it is easily portable to any Linux platform, as it is based on the excellent code of [4]</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">+ the primary upper-body detector based on [4] performs better than the one in [3] based on [7] (less false-positives)</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">+ thanks to the complementary face detector, more people are found than in [3]</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<a href=#pagetop id=t7sa style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=IV_Provided_models_28137960238_7691936388841296 name=IV_Provided_models_28137960238_7691936388841296></a>IV. Provided models
+</h3>
+<font face="courier new">pff_model_upperbody_final.mat</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">model used in the object detection framework [4], trained on the upper-body dataset of [3].</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">haarcascade_frontalface_alt2.xml</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">copy of a face model publicly available in OpenCV [6]</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<a href=#pagetop id=n8ln style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=V_Matlab_function_080440883757_22946714992042883 name=V_Matlab_function_080440883757_22946714992042883></a>V. Matlab functions
+</h3>
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">DetectStillImage</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">------------------</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">bbox = DetectStillImage(fullimgpath,ubfmodel_path,facemodel_path,det_pars,verbose);</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">runs the upper-body detector and optionally the face-detector on an image.</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">Face detections are automatically regressed to upper-body detections using pre-learned parameters</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">Input:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;fullimgpath - relative/absolute path to an image</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp;&nbsp; pffubfmodel_path - relative/absolute path to the pretrained upper body part-based model </font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;facemodel_path - (optional) relative/absolute path to the pretrained opencv face model (xml file)</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if [] then skip face detection</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;det_pars.iou_thresh - Intersection over Union threshold used during non-maximal suppression</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .opencv_face_regparams - [p1 p2 p3 p4] - opencv_face detection to upperbody detection regression parameters</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ubfpff_scale - scale at which [4] is run; higher -> detecting  smaller people</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;verbose - 0 - no output</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 1 - print on screen&nbsp;&nbsp; &nbsp;</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - 2 - show images</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">Output:</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;bbox(i,:)= [x1 y1 x2 y2 score] set of detections</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">DetectDir</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">----------</font><br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  [detections Files] = DetectDir(img_dir,pffubfmodel_path,facemodel_path,det_pars,verbose)
+</p>
+<p style="FONT-FAMILY:Courier New">
+  executes DetectStillImage on a directory with images
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  Input:<br>
+  &nbsp;&nbsp;&nbsp; img_dir - relative/absolute path to an directory with images<br>
+  &nbsp;&nbsp;&nbsp; pffubfmodel_path - relative/absolute path to the pretrained upper body part-based model<br>
+  &nbsp;&nbsp; &nbsp;facemodel_path - (optional) relative/absolute path to the pretrained opencv face model (xml file)<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if [] then skip face detection<br>
+  &nbsp;&nbsp; &nbsp;det_pars.iou_thresh - Intersection over Union threshold used during non-maximal suppression<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .opencv_face_regparams - [p1 p2 p3 p4] - opencv_face detection to upperbody detection regression parameters<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ubfpff_scale - scale at which [4] is run; higher -> detecting  smaller people<br>
+  &nbsp;&nbsp; &nbsp;verbose - 0 - no output<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 1 - print on screen&nbsp;&nbsp; &nbsp;<br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - 2 - show images<br>
+  Output:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; &nbsp;detections - detection results for a directory, detections{i} - detections found in Files(i).name<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; Files - struct array as return by dir matlab function for all processed images.
+</p>
+<p style="FONT-FAMILY:Courier New">
+  routine creates also a sub directory 'dets' where results are saved<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<a href=#pagetop id=aq.: style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=VI_Support_3001918464433402_97 name=VI_Support_3001918464433402_97></a>VI. Support
+</h3>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  For support please contact us:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+  eichner@vision.ee.ethz.ch
+</p>
+<p style="FONT-FAMILY:Courier New">
+  ferrari@vision.ee.ethz.ch
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+  Have fun!
+</p>
+<br style="FONT-FAMILY:Courier New">
+<a href=#pagetop id=npk7 style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=VII_References_370054192142561_16785274248595095 name=VII_References_370054192142561_16785274248595095></a>VII. References
+</h3>
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">[1] M.Eichner, V.Ferrari</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;Human Pose Estimation in Still Images V 1.05</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;http://www.vision.ee.ethz.ch/~calvin/articulated_human_pose_estimation_code/</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  [2] M.Eichner, V.Ferrari
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; Better appearance models for pictorial structures
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; BMVC 2009
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  [3] M. Marin, V. Ferrari, A. Zisserman:
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp;&nbsp; upper-body detector
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; &nbsp; www.robots.ox.ac.uk/~vgg/software/UpperBody/index.html
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  [4] P. Felzenszwalb, R. Girshick, D. McAllester, D. Ramanan<br>
+  &nbsp;&nbsp; &nbsp;Object Detection with Discriminatively Trained Part Based Models<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; PAMI 2009
+</p>
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">[5] P. Viola, M. Jones</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;Rapid Object Detection using a Boosted Cascade of Simple Features</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp;&nbsp; &nbsp;CVPR 2001</font><br style="FONT-FAMILY:Courier New">
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  [6] http://opencv.willowgarage.com/wiki/
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  [7] N. Dalal and B. Triggs<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp; &nbsp;Histograms of Oriented Gradients for Human Detection&nbsp;&nbsp; &nbsp;<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  &nbsp;&nbsp;&nbsp; CVPR 2005
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+</p>
+<a href=#pagetop id=w1dk style="FONT-FAMILY:Courier New" target=_self title="back to the top">back to the top</a><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<h3 style="FONT-FAMILY:Courier New">
+  <a id=VIII_Version_history_544043214_3506178777027853 name=VIII_Version_history_544043214_3506178777027853></a>VIII. Version history
+</h3>
+<font face="courier new">1.04</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">----</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- a memory leak fixed, noticable when processing many images with no detections; thanks to Huizhong Chen for pointing that out</font><br style="FONT-FAMILY:Courier New"><br style="FONT-FAMILY:Courier New">
+<font face="courier new">1.03</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">----</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- optionally runs [4] on an upscaled image resulting in detections of persons at low resolution</font><br style="FONT-FAMILY:Courier New"><br style="FONT-FAMILY:Courier New">
+<font face="courier new">1.02</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">----</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- adjusted detector parameters for better detection rate, </font><font face="courier new">and less false positives</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- improved accuracy of person localization by using the boxes of [4] refined by the</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">&nbsp; model parts and after setting their aspect-ratio to constant (v1.01 instead used [4]'s root boxes)</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">1.01</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">----</font><br style="FONT-FAMILY:Courier New">
+<font face="courier new">- DetectDir stores images with the detection overlays</font><br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New">
+<font face="courier new">1.0</font>
+<p style="FONT-FAMILY:Courier New">
+  ---
+</p>
+<p style="FONT-FAMILY:Courier New">
+  - initial release<br>
+</p>
+<p style="FONT-FAMILY:Courier New">
+  <br>
+  <a href=#pagetop id=s17: target=_self title="back to the top">back to the top</a>
+</p>
+<br style="FONT-FAMILY:Courier New">
+<br style="FONT-FAMILY:Courier New"></body>
+</html>

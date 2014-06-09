@@ -1,0 +1,16 @@
+bbox4 = [];
+    for i = 1:size(bbox3,1)
+        if(i==1)
+            bbox4 = [bbox4; bbox3(i,:)];
+        else
+            c = 0;
+            for j = 1:size(bbox4,1)
+                if( abs(bbox3(i,1)-bbox3(j,1))+abs(bbox3(i,2)-bbox3(j,2)) > 20 )
+                    c = c+1;
+                end
+            end
+            if (c == size(bbox4,1))
+                bbox4 = [bbox4; bbox3(i,:)];
+            end
+        end
+    end
