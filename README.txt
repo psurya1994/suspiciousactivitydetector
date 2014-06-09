@@ -14,7 +14,7 @@ cd ../../..
 
 4. Change the threshold values for detection
 det_pars.ubfpff_scale = 3;
-det_pars.ubfpff_thresh = -0.9;
+det_pars.ubfpff_thresh = -0.75;
 det_pars.iou_thresh = 0.9;
 
 5. Code is setup and ready to run on a test image. Run the following commands to test.
