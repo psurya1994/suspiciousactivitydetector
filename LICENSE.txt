@@ -1,8 +1,16 @@
 Copyright (c) 2014
 
+
+
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software for research purposes including the rights to use, copy, modify, merge and distribute the Software subject to the following restrictions:
 
 This permission notice shall be included in all copies or substantial portions of the Software, along with authorship credit to Surya Penmetsa, Fatima Minhuj, Amarjot Singh, S.N. Omkar.
+
+Refer to the following publications for more detialed information-
+1.  Eichner, M. and Ferrari, V. Better Appearance Models for Pictorial Structures Proceedings of British Machine Vision Conference (BMVC), 2009. 
+2. P. Felzenszwalb, R. Girshick, D. McAllester, D. Ramanan Object Detection with Discriminatively Trained Part Based Models Pattern Recognition and Machine Learning (PAMI), 2009. 
+
+We are thankful to the above authors for providing their code for our research purpose.
 
 The Software cannot be sold nor used within any commercial application without prior permission by the authors. Use is granted only for strictly non-profit purposes.
 
